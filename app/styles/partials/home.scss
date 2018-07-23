@@ -1,0 +1,121 @@
+/* ===============================
+	Home (banner)
+================================== */
+
+body #home{
+	color:#fff;
+}
+section#home{
+	background:url(../images/bg-1.jpg) no-repeat;
+	background-attachment:fixed;
+	background-size:cover;
+	text-align:center;
+	height:800px;
+	padding:50px 0px;
+	position:relative;
+	padding-top:6%;
+}
+ul.nomes{
+	list-style:none;
+	display:inline;
+	font-size:80px;
+	font-weight:300;
+	padding: 0px;
+}
+ul.nomes li{
+	display: inline-block;
+}
+.circle{
+	color: #F9667E;
+	font-size: 51px;
+	top: -15px;
+	position: relative;
+}
+.data{
+	font-size:50px;
+}
+.data span{
+	font-size:80px;
+	border-bottom:solid 2px #F9667E;
+	line-height:1em;
+}
+.hora{
+	font-size:30px;
+	margin-top: 20px;
+}
+.hora span, .lugar{
+	font-size:20px;
+}
+.save{
+	font-size:20px;
+	margin-left:-10px;
+	margin-top:20px;
+}
+.save span{
+    -moz-border-top-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	border-image: none;
+	display: inline-block;
+	margin: 5px 10px;
+	width: 40px;
+	border-color: #D6516D -moz-use-text-color -moz-use-text-color;
+	border-style: solid none none;
+	border-width: 1px 0px 0px;
+	color: #f9667e;
+}
+
+.countdownTop{
+	margin-top:30px;
+	h3{
+		font-size:18px;
+	}
+	color:#fff;
+}
+
+@media (max-width: 767px) {
+	.navbar-brand ul.nomes {
+	    font-size: 19px;
+	}
+	section#home {
+		height: auto;
+	}
+	.save span{
+		width: 17px;
+		margin: 7px 5px;
+	}
+	#home h3{
+		font-size: 18px;
+	}
+	.data{
+		font-size:30px;
+		margin-top:30px;
+	}
+	.data span{
+		font-size:45px;
+		line-height:1em;
+	}
+	section#home ul.nomes {
+		font-size: 35px;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	section#home ul.nomes li{
+		display:list-item;
+	}
+	section#home .circle {
+	    width: 64px;
+	    height: 64px;
+	    font-size: 41px;
+	    line-height: 1.5em;
+	    top: 0px;
+	    margin: auto;
+	}
+	#home .countdownTop{
+		margin-top:10px;
+		h3{
+			font-size:15px;
+		}
+	}
+}

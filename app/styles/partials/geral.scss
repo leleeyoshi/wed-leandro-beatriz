@@ -1,0 +1,182 @@
+body{
+	color:#3d3d3d;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+}
+
+/* Texts */
+h1,h2,h3,h4,h5,h6,section#home{
+	font-family: Georgia, Geneva, sans-serif;
+}
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span{
+	color:#f9667e;
+}
+
+.title-block{
+	margin:0px auto 70px auto;
+	text-align:center;
+}
+.title-block .divider{
+	border-bottom:solid 2px #f9667e;
+	width:50px;
+	margin:20px auto;
+}
+.title-block h1{
+	font-size: 53px;
+}
+.title-block p{
+	font-size:18px;
+}
+
+/* Colors */
+.bg-gray-1{background-color:#f4f4f4;}
+.bg-gray-2{background-color:#eaeaea;}
+.bg-gray-3{background-color:#cecece;}
+.bg-dark{background-color:#3d3d3d;}
+.bg-color-1{background-color:#f9667e;}
+.txt-gray-1{background-color:#f4f4f4;}
+.txt-gray-2{background-color:#eaeaea;}
+.txt-gray-3{background-color:#cecece;}
+.txt-dark{background-color:#3d3d3d;}
+.txt-color-1{color:#f9667e;}
+
+/* Layout */
+.space10{height:10px;}
+.space20{height:20px;}
+.space30{height:30px;}
+.space40{height:40px;}
+.space50{height:50px;}
+.space60{height:60px;}
+
+.top-pad-10{padding-top:10px;}
+.top-pad-20{padding-top:20px;}
+.top-pad-30{padding-top:30px;}
+.top-pad-40{padding-top:40px;}
+.top-pad-50{padding-top:50px;}
+.top-pad-60{padding-top:60px;}
+.top-pad-70{padding-top:70px;}
+.top-pad-80{padding-top:80px;}
+
+.bot-pad-10{padding-bottom:10px;}
+.bot-pad-20{padding-bottom:20px;}
+.bot-pad-30{padding-bottom:30px;}
+.bot-pad-40{padding-bottom:40px;}
+.bot-pad-50{padding-bottom:50px;}
+.bot-pad-60{padding-bottom:60px;}
+.bot-pad-70{padding-bottom:70px;}
+.bot-pad-80{padding-bottom:80px;}
+
+.top-mrg-10{margin-top:10px;}
+.top-mrg-20{margin-top:20px;}
+.top-mrg-30{margin-top:30px;}
+.top-mrg-40{margin-top:40px;}
+.top-mrg-50{margin-top:50px;}
+.top-mrg-60{margin-top:60px;}
+.top-mrg-70{margin-top:70px;}
+.top-mrg-80{margin-top:80px;}
+
+.bot-mrg-10{margin-bottom:10px;}
+.bot-mrg-20{margin-bottom:20px;}
+.bot-mrg-30{margin-bottom:30px;}
+.bot-mrg-40{margin-bottom:40px;}
+.bot-mrg-50{margin-bottom:50px;}
+.bot-mrg-60{margin-bottom:60px;}
+.bot-mrg-70{margin-bottom:70px;}
+.bot-mrg-80{margin-bottom:80px;}
+
+/* Bootstrap Elemtents*/
+.btn{
+	border-radius:3px;
+}
+.btn-primary,
+.btn-primary.btn-bordered:focus,
+.btn-primary.btn-bordered:hover,
+.btn-primary.btn-bordered:active,
+.btn-primary.btn-bordered:active:focus,
+.btn-primary.btn-bordered.active{
+	background:#f9667e;
+	border:solid 2px #f9667e;
+	color:#fff;
+}
+.btn-primary:focus,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:active:focus,
+.btn-primary.active,
+.btn-primary.btn-bordered{
+	background:none;
+	border:solid 2px #f9667e;
+	color:#f9667e;
+}
+.img-circle{
+	border:20px solid #FFF;
+}
+
+/*Section General*/
+section{
+	padding:100px 0px;
+}
+section.img-bg-2{
+	background:url(../images/bg-2.jpg) no-repeat;
+	background-attachment:fixed;
+	background-size:cover;
+	color:#FFF;
+}
+section.img-bg-3{
+	background:url(../images/bg-3.jpg) no-repeat;
+	background-attachment:fixed;
+	background-size:cover;
+}
+section.img-bg-4{
+	background:url(images/bg-4.jpg) no-repeat;
+	background-attachment:fixed;
+	background-size:cover;
+}
+section.img-bg-5{
+	background:url(../images/bg-5.jpg) no-repeat;
+	background-attachment:fixed;
+	background-size:cover;
+}
+
+/**
+ *	This element is created inside your target element
+ *	It is used so that your own element will not need to be altered
+ **/
+ .time_circles {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/**
+ *	This is all the elements used to house all text used
+ * in time circles
+ **/
+.time_circles > div {
+    position: absolute;
+    text-align: center;
+}
+
+/**
+ *	Titles (Days, Hours, etc)
+ **/
+.time_circles > div > h4 {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Century Gothic', Arial;
+}
+
+/**
+ *	Time numbers, ie: 12
+ **/
+.time_circles > div > span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: 'Century Gothic', Arial;
+    font-size: 300%;
+    margin-top: 0.4em;
+    font-weight: bold;
+}

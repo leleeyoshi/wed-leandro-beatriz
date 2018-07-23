@@ -1,0 +1,5 @@
+@mixin trasicao-mixin($valor) {
+	-webkit-transition: all ease-in-out $valor;
+	-moz-transition: all ease-in-out $valor;
+	transition: all ease-in-out $valor;
+}

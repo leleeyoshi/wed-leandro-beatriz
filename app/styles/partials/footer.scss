@@ -1,0 +1,38 @@
+.footer{
+    background: #fff;
+    display: table;
+    color: #000;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    padding: 0 0 34px 0;
+
+    .footer__wrap{
+    	width: 100%;
+    	max-width: 1150px;
+    	margin: 0 auto;
+    }
+
+    &:before{
+		content: "";
+		width: 100%;
+		height: 60px;
+		background: url(../images/borda-footer.png);
+		position: absolute;
+		top: -48px;
+		left: 0;
+		background-size: 100%;
+    }
+
+    p{
+    	font-size: 0.7rem;
+    	font-weight: bold;
+    }
+
+    .footer__logo {
+    	img{
+		    width: 78px;
+		    margin-left: 2%;
+    	}
+	}
+}
