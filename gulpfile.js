@@ -24,7 +24,6 @@ gulp.task('sass', function() {
     return gulp.src(
             [
                 './app/styles/*.scss',
-                './app/styles/**/*.scss',
                 './app/styles/common/font-awesome.css'
             ]
         ).pipe(sass().on('error', sass.logError))

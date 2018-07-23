@@ -1,0 +1,37 @@
+/* ==================================================================
+	9. Section - Featured People
+================================================================== */
+.featured img{
+	margin:0px;
+	float:right;
+	width:200px;
+	border:10px solid #FFF!important;
+	margin-left:10px;
+}
+.featured .text{
+	text-align:right;
+}
+.featured-right .featured img{
+	float:left;
+	margin-right:10px;
+}
+.featured-right .featured .text{
+	text-align:left;
+}
+.featured-right .featured img.img-right{
+	float: right;
+}
+.featured-right .featured .text.text-right{
+	text-align:right;
+}
+
+@media (max-width: 767px) {
+	.featured-right .featured img, .featured-right .featured img.img-right{
+        float: none;
+        display: block;
+        margin:auto;
+	}
+	section.bg-2{
+		height: 200px;
+	}
+}

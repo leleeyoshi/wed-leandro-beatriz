@@ -1,7 +1,50 @@
 
-/* ==================================================================
-	2. Navigation
-================================================================== */
+/* ==============================
+	Navegação
+================================= */
+
+#nav-sticky-wrapper{
+	height: 50px;
+	z-index: 1200;	
+}
+
+#nav {
+    font-family:'Oswald', Verdana, Geneva, sans-serif;
+    font-size: 15px;
+    z-index: 998;
+    width: 100%;
+	padding: 15px 0px;
+
+	.nav > li a{
+		padding: 10px 6px;
+	}
+
+	.nav > li a:after{
+		content: "/";
+		padding-left: 10px;
+		color: rgba(0, 0, 0, 0.2);
+	}
+
+	#nav_list{
+		padding: 0px 30px;
+		width: 100%;
+		text-align: center;
+	}
+
+	.navbar-nav > li {
+		float: none;
+		display: inline-block;
+	}
+}
+.navbar-default {
+    background-color: #FFF;
+    border:0px;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+   	color:#f9667e;
+    background:none;
+}
 
 .headerHeart{
 	float: left;
@@ -10,57 +53,10 @@
 	display: none!important;
 }
 
-#nav-sticky-wrapper{
-	height: 50px;
-	z-index: 1200;	
-}
-.navbar-brand ul.nomes{
-	font-size:25px;
-	text-transform:none!important;
-}
-.navbar-brand ul.nomes .circle{
-	width: 20px;
-	height: 20px;
-    font-size: 30px;
-	top: -5px;
-}
-#nav {
-    font-family:'Oswald', Verdana, Geneva, sans-serif;
-    font-size: 15px;
-    z-index: 998;
-    width: 100%;
-	padding: 15px 0px;
-}
-.navbar-default {
-    background-color: #FFF;
-    border:0px;
-}
-.nav > li a{
-	padding: 10px 6px;
-}
-.nav > li a:after{
-	content: "/";
-	padding-left: 10px;
-	color: rgba(0, 0, 0, 0.2);
-}
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
-   	color:#f9667e;
-    background:none;
-}
-#nav_list{
-	padding: 0px 30px;
-	width: 100%;
-	text-align: center;
-}
-
-.navbar-nav > li {
-    float: none;
-	display: inline-block;
-}
-
 @media (max-width: 767px) {
 	.headerHeart{
 		display: block!important;
 		margin-top: 7px;
 	}
 }
+
