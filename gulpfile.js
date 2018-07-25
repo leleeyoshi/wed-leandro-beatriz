@@ -29,7 +29,7 @@ gulp.task('sass', function() {
         ).pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({ browsers: ['last 10 versions'], cascade: true }))
         .pipe(concat('main.css'))
-        .pipe(gulp.dest('./.tmp/styles'))
+        .pipe(gulp.dest('dist/static/styles'))
         .pipe(browserSync.stream());
 });
 
@@ -39,7 +39,7 @@ gulp.task('scripts', () => {
         .pipe($.if(dev, $.sourcemaps.init()))
         .pipe($.babel())
         .pipe($.if(dev, $.sourcemaps.write('.')))
-        .pipe(gulp.dest('.tmp/scripts'))
+        .pipe(gulp.dest('dist/static/scripts'))
         .pipe(reload({ stream: true }));
 });
 
@@ -82,18 +82,18 @@ gulp.task('html', ['sass', 'scripts'], () => {
 gulp.task('images', () => {
     return gulp.src('app/images/**/*')
         .pipe($.cache($.imagemin()))
-        .pipe(gulp.dest('dist/images'));
+        .pipe(gulp.dest('dist/static/images'));
 });
 
 gulp.task('fonts', () => {
     return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function(err) {})
             .concat('app/font/**/*'))
-        .pipe($.if(dev, gulp.dest('.tmp/font'), gulp.dest('dist/font')));
+        .pipe(gulp.dest('dist/static/font'));
 });
 
 gulp.task('extras', () => {
     return gulp.src([
-        'app/*',
+        'app/*.txt',
         'app/**/*.json',
         '!app/*.html'
     ], {
@@ -105,36 +105,23 @@ gulp.task('extras', () => {
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', () => {
-    runSequence(['clean', 'wiredep'], ['scripts', 'fonts', 'sass'], () => {
+    runSequence(['clean', 'wiredep'], ['scripts', 'fonts', 'sass', 'images'], () => {
         browserSync.init({
             server: {
-                baseDir: ['.tmp', 'app']
+                baseDir: ['dist', 'app']
             }
         });
 
         gulp.watch([
             'app/*.html',
             'app/images/**/*',
-            '.tmp/fonts/**/*'
+            'dist/fonts/**/*'
         ]).on('change', reload);
 
         gulp.watch('app/styles/**/*.scss', ['sass']);
         gulp.watch('app/scripts/**/*.js', ['scripts']);
         gulp.watch('app/font/**/*', ['fonts']);
         gulp.watch('bower.json', ['wiredep', 'fonts']);
-    });
-});
-
-gulp.task('serve:dist', ['build'], () => {
-	 var endpoint = url.parse('https://cadastropre3.claro.com.br/api/Cadastrar');
-    endpoint.route = '/api/Cadastrar'
-    browserSync.init({
-        notify: false,
-        port: 9000,
-        server: {
-            baseDir: ['dist'],
-            middleware: [proxy(endpoint)]
-        }
     });
 });
 
