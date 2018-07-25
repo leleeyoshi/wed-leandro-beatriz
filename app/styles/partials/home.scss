@@ -66,14 +66,6 @@ ul.nomes li{
 	color: #f9667e;
 }
 
-.countdownTop{
-	margin-top:30px;
-	h3{
-		font-size:18px;
-	}
-	color:#fff;
-}
-
 @media (max-width: 767px) {
 	.navbar-brand ul.nomes {
 	    font-size: 19px;
@@ -117,5 +109,8 @@ ul.nomes li{
 		h3{
 			font-size:15px;
 		}
+	}
+	section {
+		padding: 50px 0px;
 	}
 }

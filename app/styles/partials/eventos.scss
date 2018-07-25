@@ -205,11 +205,45 @@
 .timeline-body > p + p {
 	margin-top: 5px;
 }
-.final-frase{
-	font-size: 28px;
-	margin-top: 20px;
-}
-.final-frase span{
-	color:#f9667e;
-	font-weight:bold;
+
+@media (max-width: 767px) {
+   
+    ul.timeline:before {
+        left: 40px;
+    }
+    .timeline > li {
+	    margin-top:0px;
+	}
+
+    ul.timeline > li > .timeline-panel {
+        width: calc(100% - 90px);
+        width: -moz-calc(100% - 90px);
+        width: -webkit-calc(100% - 90px);
+    }
+
+    ul.timeline > li > .timeline-badge,
+    ul.timeline > li:first-child > .timeline-badge,
+    ul.timeline > li> .timeline-end .timeline-badge {
+        left: 15px;
+        margin-left: 0;
+        top: 16px;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        float: right;
+    }
+
+    ul.timeline > li > .timeline-panel:before {
+        border-left-width: 0;
+        border-right-width: 15px;
+        left: -15px;
+        right: auto;
+    }
+
+    ul.timeline > li > .timeline-panel:after {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -14px;
+        right: auto;
+    }
 }

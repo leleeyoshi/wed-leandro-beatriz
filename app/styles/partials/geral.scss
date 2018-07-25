@@ -69,22 +69,19 @@ section.bg-2{
 	background-size:cover;
 	height: 300px;
 }
-section.img-bg-4{
-	background:url(images/bg-4.jpg) no-repeat;
+section.bg-3{
+	background:url(../images/bg-4.jpg) no-repeat;
 	background-attachment:fixed;
 	background-size:cover;
 }
-section.img-bg-5{
+section.bg-4{
 	background:url(../images/bg-5.jpg) no-repeat;
 	background-attachment:fixed;
 	background-size:cover;
 }
 
 @media (max-width: 767px) {
-	section.bg-1{
-		height: 200px;
-	}
-	section.bg-2{
+	section.bg-1, section.bg-2, section.bg-3{
 		height: 200px;
 	}
 }
