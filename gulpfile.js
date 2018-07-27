@@ -108,7 +108,10 @@ gulp.task('serve', () => {
     runSequence(['clean', 'wiredep'], ['scripts', 'fonts', 'sass', 'images'], () => {
         browserSync.init({
             server: {
-                baseDir: ['dist', 'app']
+                baseDir: ['dist', 'app'],
+                routes: {
+                    '/bower_components': 'bower_components'
+                }
             }
         });
 
