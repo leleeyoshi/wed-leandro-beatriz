@@ -71,36 +71,45 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span{
 	color:#f9667e;
 }
 
-section{
-	padding:100px 0px;
-}
-section.bg-1{
-	background:url(../images/bg-1.jpg) no-repeat;
-	background-attachment:fixed;
-	background-size:cover;
-	height: 300px;
-}
-section.bg-2{
-	background:url(../images/bg-2.jpg) no-repeat;
-	background-attachment:fixed;
-	background-size:cover;
-	height: 300px;
-}
-section.bg-3{
-	background:url(../images/bg-5.jpg) no-repeat;
-	background-attachment:fixed;
-	background-size:cover;
-	height: 300px;
-}
-section.bg-4{
-	background:url(../images/bg-4.jpg) no-repeat;
-	background-attachment:fixed;
-	background-size:cover;
-	height: 300px;
-}
+// section{
+// 	padding: 0px 0px 100px 0px;
+// }
+
+// section.bg-4{
+// 	padding: 0px 0px 0px 0px;
+// }
+
+// section#o-casal{
+// 	padding: 100px 0px 100px 0px;
+// }
+// section.bg-1{
+// 	background:url(../images/bg-1.jpg) no-repeat;
+// 	background-attachment:fixed;
+// 	background-size:cover;
+// 	height: 300px;
+// }
+// section.bg-2{
+// 	background:url(../images/bg-2.jpg) no-repeat;
+// 	background-attachment:fixed;
+// 	background-size:cover;
+// 	height: 300px;
+// }
+// section.bg-3{
+// 	background:url(../images/bg-5.jpg) no-repeat;
+// 	background-attachment:fixed;
+// 	background-size:cover;
+// 	height: 300px;
+// }
+// section.bg-4{
+// 	background:url(../images/bg-4.jpg) no-repeat;
+// 	background-attachment:fixed;
+// 	background-size:cover;
+// 	height: 300px;
+// }
 
 @media (max-width: 767px) {
 	section.bg-1, section.bg-2, section.bg-3, section.bg-4{
 		height: 300px;
+		background-attachment: scroll;
 	}
 }

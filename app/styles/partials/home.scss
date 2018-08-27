@@ -2,17 +2,13 @@
 	Home (banner)
 ================================== */
 
-body #home{
+body #home, .homeid{
 	color:#fff;
 	font-family: 'eva-cute';
 }
-section#home{
-	background:url(../images/bg-11.jpg) no-repeat;
-	background-attachment:fixed;
-	background-size:cover;
+section#home, .homeid{
 	text-align:center;
-	height:800px;
-	padding:50px 0px;
+	// padding:50px 0px;
 	position:relative;
 	padding-top:6%;
 }
@@ -76,17 +72,17 @@ ul.nomes li{
 	.navbar-brand ul.nomes {
 	    font-size: 19px;
 	}
-	section#home {
+	section#home, .homeid {
 		height: auto;
 	}
 	.save span{
 		width: 17px;
 		margin: 7px 5px;
 	}
-	#home h3{
+	#home h3, .homeid h3{
 		font-size: 18px;
 	}
-	#home .lugar > h3{
+	#home .lugar > h3, .homeid .lugar > h3{
 		font-size:30px;
 	}
 	.data{
@@ -97,15 +93,15 @@ ul.nomes li{
 		font-size:45px;
 		line-height:1em;
 	}
-	section#home ul.nomes {
+	section#home ul.nomes, .homeid ul.nomes {
 		font-size: 35px;
 		text-align: center;
 		margin-bottom: 20px;
 	}
-	section#home ul.nomes li{
+	section#home ul.nomes li, .homeid ul.nomes li{
 		display:list-item;
 	}
-	section#home .circle {
+	section#home .circle, .homeid .circle {
 	    width: 64px;
 	    height: 64px;
 	    font-size: 41px;
@@ -113,13 +109,7 @@ ul.nomes li{
 	    top: 0px;
 	    margin: auto;
 	}
-	#home .countdownTop{
-		margin-top:10px;
-		h3{
-			font-size:15px;
-		}
-	}
-	section {
-		padding: 50px 0px;
-	}
+	// section {
+	// 	padding: 50px 0px;
+	// }
 }

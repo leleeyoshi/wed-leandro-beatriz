@@ -7,7 +7,6 @@
 		"jQuery" : "^3.2.1",
 		"sticky": "*",
 		"jQuery-One-Page-Nav" : "*",
-		"stellar" : "*",
 		"bootstrap-validator" : "*"
 	}
 }
