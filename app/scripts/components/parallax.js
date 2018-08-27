@@ -3,7 +3,7 @@
 	//only acstivate stellar for window widths above or equal to 1024
     var stellarActivated = false;
     
-    $(window).on("resize", function() {
+    $(window).on('resize', function() {
         react_to_window();
     });
     

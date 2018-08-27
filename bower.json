@@ -3,8 +3,8 @@
 	"private": true,
 	"dependencies": {
 		"modernizr": "~2.8.1",
-		"jquery": "^3.2.1",
 		"bootstrap" : "*",
+		"jQuery" : "^3.2.1",
 		"sticky": "*",
 		"jQuery-One-Page-Nav" : "*",
 		"stellar" : "*",

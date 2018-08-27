@@ -1,5 +1,5 @@
-$(window).on("load", function(){
-  $("#nav-sticky-wrapper").sticky({ topSpacing: 0 });
+$(window).on('load', function(){
+  $('#nav-sticky-wrapper').sticky({ topSpacing: 0 });
 });
 
 

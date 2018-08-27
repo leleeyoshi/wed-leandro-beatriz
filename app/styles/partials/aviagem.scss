@@ -25,16 +25,22 @@
 	text-align:right;
 }
 
+.featured-last img{
+	padding-bottom: 150px;
+}
+
 @media (max-width: 767px) {
 	.featured-right .featured img, .featured-right .featured img.img-right{
         float: none;
         display: block;
         margin:auto;
 	}
-	section.bg-2{
-		height: 200px;
-	}
 	.featured-right .featured .text.text-right, .featured-right .featured .text {
 		text-align:center;
 	}
+
+	.featured-last img{
+		padding-bottom: 0px;
+	}
+	
 }

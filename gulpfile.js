@@ -10,7 +10,8 @@ const wait = require('gulp-wait');
 const url = require('url');
 const proxy = require('proxy-middleware');
 const autoprefixer = require('gulp-autoprefixer');
-
+const eventStream = require('event-stream');
+const uglify = require('gulp-uglify');
 
 const cachebust = require('gulp-cache-bust');
 
@@ -39,7 +40,7 @@ gulp.task('scripts', () => {
         .pipe($.if(dev, $.sourcemaps.init()))
         .pipe($.babel())
         .pipe($.if(dev, $.sourcemaps.write('.')))
-        .pipe(gulp.dest('dist/static/scripts'))
+        // .pipe(gulp.dest('dist/static/scripts'))
         .pipe(reload({ stream: true }));
 });
 
@@ -101,6 +102,22 @@ gulp.task('extras', () => {
     }).pipe(gulp.dest('dist'));
 });
 
+gulp.task('vendor', function() {
+    return eventStream.merge([
+            gulp.src(
+                [
+                    'bower_components/jquery/dist/jquery.min.js',
+                    'bower_components/bootstrap/dist/js/bootstrap.min.js',
+                    'bower_components/bootstrap-validator/js/validator.js',
+                    'bower_components/jQuery-One-Page-Nav/jquery.nav.js',
+                    'bower_components/stellar/src/jquery.stellar.js',
+                    'bower_components/sticky/jquery.sticky.js'
+                ]
+            )
+        ])
+        .pipe(uglify())
+        .pipe(gulp.dest('./dist/static/js/vendor'));
+});
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
@@ -144,7 +161,7 @@ gulp.task('wiredep', () => {
         .pipe(gulp.dest('app'));
 });
 
-gulp.task('prod', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('prod', ['html', 'images', 'fonts', 'extras'], () => {
     return gulp.src('dist/**/*').pipe($.size({ title: 'prod', gzip: true }));
 });
 

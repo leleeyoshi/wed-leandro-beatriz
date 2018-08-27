@@ -4,9 +4,10 @@
 
 body #home{
 	color:#fff;
+	font-family: 'eva-cute';
 }
 section#home{
-	background:url(../images/bg-1.jpg) no-repeat;
+	background:url(../images/bg-11.jpg) no-repeat;
 	background-attachment:fixed;
 	background-size:cover;
 	text-align:center;
@@ -24,6 +25,7 @@ ul.nomes{
 }
 ul.nomes li{
 	display: inline-block;
+
 }
 .circle{
 	color: #F9667E;
@@ -43,7 +45,11 @@ ul.nomes li{
 	font-size:30px;
 	margin-top: 20px;
 }
-.hora span, .lugar{
+.lugar > h3{
+	font-size:40px;
+	font-family: 'Abuget';
+}
+.hora span{
 	font-size:20px;
 }
 .save{
@@ -79,6 +85,9 @@ ul.nomes li{
 	}
 	#home h3{
 		font-size: 18px;
+	}
+	#home .lugar > h3{
+		font-size:30px;
 	}
 	.data{
 		font-size:30px;
