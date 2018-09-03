@@ -61,5 +61,12 @@
 	#nav{
 		padding: 2px 0px;
 	}
+	#nav .navbar-nav > li {
+		float: none;
+		display: block;
+	}
+	#nav #nav_list{
+		text-align: left;
+	}
 }
 

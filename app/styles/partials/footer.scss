@@ -1,5 +1,12 @@
 .footer, .footerid{
     background: #fff;
     display: table;
-    color: #fff;
+	color: #fff;
+	padding: 90px;
+}
+
+@media (max-width: 767px) {
+	.footer, .footerid{
+		padding: 40px;
+	}
 }

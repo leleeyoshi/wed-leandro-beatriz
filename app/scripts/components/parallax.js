@@ -1,4 +1,4 @@
-
-$('.bg-1, .bg-2, .bg-3, .bg-4, #home').imageScroll({
-    mediaHeight: 200
-});
+ $('.bg-1, .bg-2, .bg-3, #home').imageScroll();
+ $('.bg-4').imageScroll({
+        holderClass: 'footer'
+    });
