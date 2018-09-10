@@ -65,5 +65,5 @@ let getFieldsFromReq = req => {
 }
 
 let normalizeField = field => {
-    return field.replace(/[^a-zA-Z 0-9 áàâãäÁÀÂÃÄéèêêÉÈÊËíìîïÍÌÎÏóòôõöÓÒÔÕÖúùûüÚÙÛçÇ]/g, "").trim()
+    return field;
 }

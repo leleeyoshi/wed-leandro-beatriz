@@ -7,7 +7,7 @@ const transporter = nodemailer.createTransport({
     secure: false, // true for 465, false for other ports
     auth: {
         user: "contato@puntacanabiaeleandro.com.br",
-        pass: "awaraw"
+        pass: "awaw"
     },
     tls: { rejectUnauthorized: false }
 });
@@ -19,8 +19,9 @@ module.exports = (obj) => {
             const mailOptions = {
                 from: 'contato@puntacanabiaeleandro.com.br',
                 to: 'contato@puntacanabiaeleandro.com.br',
-                subject: 'Cadastro do :' + obj.name,
-                html: '<h1>Cadastro do ' + obj.name + '</h1>' +
+                subject: 'Cadastro - ' + obj.name,
+                html: '<h1>Cadastro</h1>' +
+                '<p>Nome: ' + obj.name + '</p>' +
                 '<p>Email: ' + obj.email + '</p>' +
                 '<p>WhatsApp: ' + obj.tel + '</p>' +
                 '<p>Quantidade de pessoas: ' + obj.qtde + '</p>'
