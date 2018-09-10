@@ -1,5 +1,5 @@
 .footer, .footerid{
-    background: #fff;
+    // background: #fff;
     display: table;
 	color: #fff;
 	padding: 90px;
@@ -7,6 +7,6 @@
 
 @media (max-width: 767px) {
 	.footer, .footerid{
-		padding: 40px;
+		padding-top: 90px;
 	}
 }

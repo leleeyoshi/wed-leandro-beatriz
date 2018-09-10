@@ -378,7 +378,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="tel" class="form-control" name="tel" placeholder="Whatsapp" required="">
+                                    <input type="number" min="0" class="form-control" name="tel" placeholder="Whatsapp (11)11111-1111" required="">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
@@ -388,7 +388,7 @@
                                 <div class="form-group">
                                     <!--textarea rows="5" class="form-control" name="message" placeholder="Write your message...​" required=""></textarea-->
                                     <span>Quantidade de pessoas no apartamento:</span>
-                                    <select>
+                                    <select class="form-control selectCenter"  name="qtde" required="">
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -412,7 +412,7 @@
     <!-- END SECTION: rsvp -->
 
     <!-- START: footer -->
-    <div id="footer" class="bg-4" data-image="static/images/bg-4.jpg" data-cover-ratio="0.5">
+    <div id="footer" class="bg-4">
         <div class="container footerid">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1 col-xs-12 text-center">

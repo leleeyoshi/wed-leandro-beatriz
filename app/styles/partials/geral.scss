@@ -100,12 +100,12 @@ section{
 // 	background-size:cover;
 // 	height: 300px;
 // }
-// section.bg-4{
-// 	background:url(../images/bg-4.jpg) no-repeat;
-// 	background-attachment:fixed;
-// 	background-size:cover;
-// 	height: 300px;
-// }
+div.bg-4{
+	background:url(../images/bg-4.jpg) no-repeat;
+	background-attachment:fixed;
+	background-size:cover;
+	height: 300px;
+}
 
 @media (max-width: 767px) {
 	section.bg-1, section.bg-2, section.bg-3, section.bg-4{
