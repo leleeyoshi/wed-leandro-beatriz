@@ -106,6 +106,8 @@ gulp.task('vendor', function() {
     return eventStream.merge([
             gulp.src(
                 [
+                    'bower_components/axios/dist/axios.js',
+                    'bower_components/modernizr/modernizr.js',
                     'bower_components/jquery/dist/jquery.min.js',
                     'bower_components/bootstrap/dist/js/bootstrap.min.js',
                     'bower_components/bootstrap-validator/js/validator.js',
