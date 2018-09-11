@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer');
+let config = require("./config");
 
 const transporter = nodemailer.createTransport({
     service: 'Godaddy',
@@ -7,7 +8,7 @@ const transporter = nodemailer.createTransport({
     secure: false, // true for 465, false for other ports
     auth: {
         user: "contato@puntacanabiaeleandro.com.br",
-        pass: "awaw"
+        pass: config.emailpass
     },
     tls: { rejectUnauthorized: false }
 });
@@ -27,8 +28,13 @@ module.exports = (obj) => {
                 '<p>Quantidade de pessoas: ' + obj.qtde + '</p>'
             };
             
-            transporter.sendMail(mailOptions)
-            resolve(obj);
+            transporter.sendMail(mailOptions, function(error){
+                if(error){
+                    reject({data:'Erro ao efetuar o cadastro!'})
+                }else{
+                    resolve(obj);
+                }
+            })
 
         } catch (error) {
             reject({data:'Erro ao efetuar o cadastro!'})

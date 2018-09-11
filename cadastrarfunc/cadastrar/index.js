@@ -1,8 +1,9 @@
 const validator = require('./validator.js');
 const emailService = require('./emailService.js');
+let config = require("./config");
 
 module.exports = function (context, req) {
-
+    context.log('aaaa', config.emailpass);
     validator(context, req)
     .then((obj) => emailService(obj))
     .then(result => {

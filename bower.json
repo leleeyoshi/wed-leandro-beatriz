@@ -8,6 +8,7 @@
     "sticky": "*",
     "jQuery-One-Page-Nav": "*",
     "bootstrap-validator": "*",
-    "Parallax-ImageScroll": "^0.2.3"
+    "Parallax-ImageScroll": "^0.2.3",
+    "axios": "^0.18.0"
   }
 }
