@@ -12,7 +12,7 @@ var verifyCallback = function(response) {
 
 class Required {
     validaFormSubmit() {
-        let eventT = document.createEvent('HTMLEvents');
+        const eventT = document.createEvent('HTMLEvents');
         eventT.initEvent('blur', true, false);
 
         for (var i = 0; i < elem.length; i++) {
@@ -25,9 +25,9 @@ class Required {
         for (var i = 0; i < elem.length; i++) {
             elem[i].addEventListener('blur', function() {
 
-                let checkValid = document.getElementById('cadastrarForm').checkValidity();
+                const checkValid = document.getElementById('cadastrarForm').checkValidity();
 
-                let msg = this.parentNode.getElementsByClassName('with-errors')[0];
+                const msg = this.parentNode.getElementsByClassName('with-errors')[0];
 
                 if (!this.checkValidity()) {
 
@@ -51,6 +51,6 @@ class Required {
     }
 }
 
-let form = new Required();
+const form = new Required();
 
 form.requiredElem();

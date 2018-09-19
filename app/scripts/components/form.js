@@ -11,7 +11,7 @@ const sucessMessage =
 
 document.getElementById('cadastrarSubmit').addEventListener('click', function(event) {
     event.preventDefault();
-    let isValidForm = document.getElementById('cadastrarForm').checkValidity();
+    const isValidForm = document.getElementById('cadastrarForm').checkValidity();
     form.validaFormSubmit();
 
     if(isValidForm){
