@@ -1,6 +1,60 @@
+div.bg-4{
+	background: url(../images/binding_dark.png) repeat;
+	background-position-x: center;
+	height: 150px;
+}
+
+.clock{
+	zoom: 0.5;
+	-moz-transform: scale(0.5);
+}
+
 .footer, .footerid{
-    // background: #fff;
-    // display: table;
 	color: #fff;
-	padding: 90px;
+}
+
+.clock-container{
+    width: 360px;
+    margin: 25px auto 0 auto;
+}
+
+.flip-clock-divider .flip-clock-label {
+    font-size: 24px;
+    color: rgb(204, 204, 204);
+}
+
+span.flip-clock-divider.days > span{
+    right: -130px;
+}
+
+span.flip-clock-divider.hours > span.flip-clock-label{
+    right: -100px;
+}
+
+span.flip-clock-divider.minutes > span.flip-clock-label{
+    right: -110px;
+}
+
+span.flip-clock-divider.seconds > span.flip-clock-label{
+    right: -120px;
+}
+
+.flip-clock-wrapper{
+    margin: 0em;
+}
+
+@media screen and (max-width: 680px){
+    .save-date{
+        font-size:24px;
+    }
+    .clock{
+        zoom: 0.3;
+        -moz-transform: scale(0.3);
+    }
+    .clock-container{
+        width: 210px;
+    }
+    div.bg-4{
+        height: 110px;
+    }
 }

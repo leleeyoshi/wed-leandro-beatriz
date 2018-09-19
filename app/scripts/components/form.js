@@ -1,6 +1,8 @@
 const modalOpen = document.getElementsByClassName('modal__wrap');
 const modalContent = document.getElementsByClassName('modal__content');
 const messageModal = document.querySelector('.modal__wrap .append');
+const responseForm = document.getElementsByClassName('responseForm');
+const cadastrarSubmit = document.getElementsByClassName('cadastrarSubmit');
 
 const sucessMessage = 
     '<div class="append modal__sucess">'+
@@ -9,11 +11,19 @@ const sucessMessage =
 
 document.getElementById('cadastrarSubmit').addEventListener('click', function(event) {
     event.preventDefault();
-    sendForm();
+    let isValidForm = document.getElementById('cadastrarForm').checkValidity();
+    form.validaFormSubmit();
+
+    if(isValidForm){
+        cadastrarSubmit[0].disabled = true;
+        responseForm[0].innerText = 'Enviando ...';
+        responseForm[0].style.display = 'hide';
+        sendForm();
+    }
+
 });
 
 function sendForm() {
-    //api.puntacanabiaeleandro.com.br
     const serializedForm = document.getElementById('cadastrarForm');
     const _data = toJSONString(serializedForm);
     console.log(_data);
@@ -33,20 +43,16 @@ function sendForm() {
                 div.innerHTML = sucessMessage.trim();
                 modalContent[0].appendChild(div);
                 $('body').css('overflow', 'hidden');
+                cadastrarSubmit[0].disabled = false;
             }
 
         })
         .catch(function(e) {
 
-            // https://functions.azure.com
-            // https://functions-staging.azure.com
-            // https://functions-next.azure.com
-            // http://www.puntacanabiaeleandro.com.br
-            // modalClose();
-
-            // responseForm[0].innerText = e.response.data.data;
-            // responseForm[0].style.display = 'block';
-
+            console.log(e.response.data.data);
+            responseForm[0].innerText = "Não foi possível cadastrar no momento, tente novamente ou entre em contato pelo e-mail contato@puntacanabiaeleandro.com.br";
+            responseForm[0].style.display = 'block';
+            cadastrarSubmit[0].disabled = false;
         });
 
     return false;
@@ -70,3 +76,17 @@ function resetForm() {
     }, 100);
     $('body').css('overflow', 'auto');
 }
+
+$(document).ready(function() {
+
+    var date = new Date("2019-06-20T17:00:00");
+    var now = new Date();
+    var diff = (date.getTime()/1000) - (now.getTime()/1000); 
+
+    var clock = $('.clock').FlipClock(diff,{
+        clockFace: 'DailyCounter',
+        countdown: true,
+        autoStart: true,
+        language:'pt-br',
+    });
+});

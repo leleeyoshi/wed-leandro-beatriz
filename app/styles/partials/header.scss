@@ -46,15 +46,20 @@
     background:none;
 }
 
-.headerHeart{
+.headerHeart, .headerLetter{
 	float: left;
 	font-size: 30px!important;
 	color: #f9667e;
 	display: none!important;
+	margin-left:10px;
+}
+
+.headerLetterAnd{
+	font-size:20px!important;
 }
 
 @media (max-width: 767px) {
-	.headerHeart{
+	.headerHeart, .headerLetter{
 		display: block!important;
 		margin-top: 9px;
 	}

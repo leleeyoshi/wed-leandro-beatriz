@@ -54,6 +54,16 @@
 
 .selectCenter{
     display: inline;
-    width: 67px;
+    width: 56px;
     margin: auto;
+}
+
+.responseForm{
+    margin-top:20px;
+}
+
+.with-errors{
+    color: red;
+    font-size:12px;
+    display:none;
 }

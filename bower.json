@@ -9,6 +9,7 @@
     "jQuery-One-Page-Nav": "*",
     "bootstrap-validator": "*",
     "Parallax-ImageScroll": "^0.2.3",
-    "axios": "^0.18.0"
+    "axios": "^0.18.0",
+    "flipclock": "FlipClock#^0.7.7"
   }
 }

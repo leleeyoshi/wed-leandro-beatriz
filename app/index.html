@@ -45,8 +45,8 @@
             <div class="sticky-wrapper" id="nav-sticky-wrapper">
                 <nav id="nav" class="navbar navbar-default">
                     <div class="container">
-                        <i class="headerHeart fa fa-heart"></i>
                         <div class="navbar-header">
+                            <span class="headerLetter">B <span class="headerLetterAnd">&</span> L</span>
                             <button type="button" class="navbar-toggle scroll-event-inhoshi" data-toggle="collapse" data-target="#nav_menu">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="icon-bar"></span>
@@ -356,26 +356,26 @@
                 </div>
                 <div class="col-md-8 col-md-offset-2 col-xs-12 text-center">
 
-                    <form id="cadastrarForm" method="post"data-toggle="validator" novalidate="true">
+                    <form id="cadastrarForm" method="post" class="cadastrarForm">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="name" placeholder="Nome Completo" required="">
-                                    <div class="help-block with-errors"></div>
+                                    <input type="text" class="form-control" name="name" maxlength="100" placeholder="Nome Completo" required />
+                                    <div class="help-block with-errors">Campo Obrigatório</div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" name="email" placeholder="Seu Email" required="">
-                                    <div class="help-block with-errors"></div>
+                                    <input type="email" class="form-control" name="email" maxlength="50" placeholder="E-mail" required />
+                                    <div class="help-block with-errors">Campo Obrigatório</div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="number" min="0" class="form-control" name="tel" placeholder="Whatsapp (11)11111-1111" required="">
-                                    <div class="help-block with-errors"></div>
+                                <div class="form-group" id="tel">
+                                    <input class="form-control" placeholder="Whatsapp" name="tel" type="text" class="phone-mask" autocomplete="off" autocapitalize="off" spellcheck="false" pattern=".{13,}"required />
+                                    <div class="help-block with-errors">Campo Obrigatório</div>
                                 </div>
                             </div>
                         </div>
@@ -383,7 +383,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <!--textarea rows="5" class="form-control" name="message" placeholder="Write your message...​" required=""></textarea-->
-                                    <span>Quantidade de pessoas no apartamento:</span>
+                                    <span>Quantidade de pessoas:</span>
                                     <select class="form-control selectCenter"  name="qtde" required="">
                                         <option>1</option>
                                         <option>2</option>
@@ -398,9 +398,10 @@
                                 </div>
                             </div>
                         </div>
-                    </form>
 
-                    <button class="btn btn-primary btn-lg" type="submit" id="cadastrarSubmit">Eu vou!</button>
+                        <button class="btn btn-primary btn-lg cadastrarSubmit" type="submit" id="cadastrarSubmit">Eu vou!</button>
+                        <div class="responseForm"></div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -411,8 +412,9 @@
     <div id="footer" class="bg-4">
         <div class="container footerid">
             <div class="row">
-                <div class="col-md-10 col-md-offset-1 col-xs-12 text-center">
-                    <h1>Obrigado!</h1>
+                <h1 class="text-center save-date">-- SAVE THE DATE --</h1>
+                <div class="clock-container" >
+                    <span class="clock"></span>
                 </div>
             </div>
         </div>
@@ -436,11 +438,14 @@
     <script src="/bower_components/jQuery-One-Page-Nav/jquery.nav.js"></script>
     <script src="/bower_components/Parallax-ImageScroll/jquery.imageScroll.min.js"></script>
     <script src="/bower_components/sticky/jquery.sticky.js"></script>
+    <script src="/bower_components/flipclock/compiled/flipclock.min.js"></script>
     
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/components/parallax.js"></script>
     <script src="scripts/header/menu.js"></script>
+    <script src="scripts/components/masks.js"></script>
+    <script src="scripts/components/required.js"></script>
     <script src="scripts/components/form.js"></script>
 
 </body>
