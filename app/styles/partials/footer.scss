@@ -6,7 +6,10 @@ div.bg-4{
 
 .clock{
 	zoom: 0.5;
-	-moz-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
 }
 
 .footer, .footerid{
@@ -19,7 +22,12 @@ div.bg-4{
 }
 
 .flip-clock-divider .flip-clock-label {
-    font-size: 24px;
+    // font-size: 24px!important;
+    color: rgb(204, 204, 204);
+}
+
+.flip-clock-wrapper{
+    font: normal 24px "Helvetica Neue", Helvetica, sans-serif!important;
     color: rgb(204, 204, 204);
 }
 
@@ -50,11 +58,17 @@ span.flip-clock-divider.seconds > span.flip-clock-label{
     .clock{
         zoom: 0.3;
         -moz-transform: scale(0.3);
+        -o-transform: scale(0.3);
+        -webkit-transform: scale(0.3);
+        -ms-transform: scale(0.3);
     }
     .clock-container{
         width: 210px;
     }
     div.bg-4{
         height: 110px;
+    }
+    ul.aloha li a div div.inn{
+        font-size:30px!important;
     }
 }

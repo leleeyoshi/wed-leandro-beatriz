@@ -77,6 +77,14 @@ function resetForm() {
     $('body').css('overflow', 'auto');
 }
 
+var ios = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+function isIOS(){
+    if(ios && $(window).width() <= 680){
+        $('#footer > div > div > div > span > ul.flip').addClass('aloha');
+    }
+}
+
 $(document).ready(function() {
 
     var date = new Date("2019-06-20T17:00:00");
@@ -89,4 +97,10 @@ $(document).ready(function() {
         autoStart: true,
         language:'pt-br',
     });
+
+    isIOS();
+});
+
+$(window).resize(function(){
+    isIOS();
 });
